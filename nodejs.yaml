@@ -3,7 +3,7 @@ pool:
   vmImage: ubuntu-latest
 
 trigger:
-  - main
+  - master
 
 steps:
   - task: NodeTool@0

@@ -3,7 +3,7 @@ pool:
   vmImage: ubuntu-latest
 
 trigger:
-  - main
+  - master
 
 jobs:
   - job: single job with 5 steps
