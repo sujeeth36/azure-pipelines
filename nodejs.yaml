@@ -1,0 +1,15 @@
+---
+pool: 
+  vmImage: ubuntu-latest
+
+trigger:
+  - main
+
+steps:
+  - task: NodeTool@0
+    displayName: Node install
+    inputs:
+      versionSpec: '10.19.0'
+  - task: Npm@1
+    inputs:
+      command: 'install'

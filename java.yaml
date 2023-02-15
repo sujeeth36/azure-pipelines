@@ -1,0 +1,10 @@
+---
+- name: java install on ubutnu
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: install java 17
+      ansible.builtin.apt:
+        name: openjdk-17-jdk
+        update_cache: yes
+        state: present

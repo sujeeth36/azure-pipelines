@@ -1,0 +1,12 @@
+pool:
+  vmImage: ubuntu-latest
+
+trigger:
+  - main
+
+jobs:
+  - job: shells
+    steps:
+      - script: sudo df -h
+      - script: echo sujit
+      - script: sudo apt update

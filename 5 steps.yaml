@@ -1,0 +1,15 @@
+---
+pool: 
+  vmImage: ubuntu-latest
+
+trigger:
+  - main
+
+jobs:
+  - job: single job with 5 steps
+    steps:
+      - script: echo this is sujit
+      - script: echo SKLM
+      - script: echo passion in trading
+      - script: echo with no emotions
+      - script: echo with no money
