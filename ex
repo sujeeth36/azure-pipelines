@@ -1,7 +1,7 @@
 pool: 
   name: Default
 trigger:
-  - main
+  - master
 
 steps:
   - task: Maven@3
