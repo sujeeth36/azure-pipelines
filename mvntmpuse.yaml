@@ -5,4 +5,4 @@ trigger:
   - master
 
 steps: 
-  - template: ./mvntmp.yaml
+  - template: ./mvtmp.yaml
