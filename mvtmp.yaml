@@ -1,5 +1,5 @@
 parameters:
-- name: maven
+- name: goal
   displayName: maven install
   type: string
   default: 'package'
@@ -18,9 +18,13 @@ parameters:
 
 steps:
   - task: Maven@3
-    inputs:
-      mavenPOMFile: ${{ parameters.pomFilePath }}
-      javaHomeOption: ${{ parameters.jdk }}
-      mavenVersionOption: ${{ parameters.maven }}
-      publishJUnitResults: true
+    inputs: 
+      mavenPOMFile: 'pom.xml'
+      goals: 'package'
+      mavenPOMFile: "${{ parameters.pomFilePath }}"
+      goals: "${{ parameters.goal }}"
+      publishJUnitResults: yes
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      jdkVersionOption: '1.8'
+      jdkVersionOption: "${{ parameters.jdk }}"
+0 comments on commit 122fe64
