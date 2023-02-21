@@ -24,4 +24,3 @@ steps:
       publishJUnitResults: yes
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       jdkVersionOption: "${{ parameters.jdk }}"
-0 comments on commit 122fe64
