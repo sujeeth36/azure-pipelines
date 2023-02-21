@@ -23,10 +23,11 @@ parameters:
   type: string
   default: 'pom.xml'
 
-- task: Maven@3
-  inputs:
-    mavenPOMFile: ${{ parameters.pomFilePath }}
-    javaHomeOption: ${{ parameters.jdk }}
-    mavenVersionOption: ${{ parameters.maven }}
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPOMFile: ${{ parameters.pomFilePath }}
+      javaHomeOption: ${{ parameters.jdk }}
+      mavenVersionOption: ${{ parameters.maven }}
+      publishJUnitResults: true
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
