@@ -1,6 +1,6 @@
 ---
 pool:
-  name: default
+  name: Default
 
 trigger:
   - master
