@@ -19,12 +19,9 @@ parameters:
 steps:
   - task: Maven@3
     inputs: 
-      mavenPOMFile: 'pom.xml'
-      goals: 'package'
       mavenPOMFile: "${{ parameters.pomFilePath }}"
       goals: "${{ parameters.goal }}"
       publishJUnitResults: yes
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      jdkVersionOption: '1.8'
       jdkVersionOption: "${{ parameters.jdk }}"
 0 comments on commit 122fe64
