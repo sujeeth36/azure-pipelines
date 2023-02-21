@@ -1,0 +1,26 @@
+parameters:
+- name: maven
+  displayName: maven install
+  type: string
+  default: 'package'
+  values: 
+    - package
+    - install
+    - compile
+- name: jdk
+  displayName: java install
+  type: string
+  default: '1.11'
+- name: pomFilePath
+  displayName: mavenPOMFile
+  type: string
+  default: 'pom.xml'
+
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPOMFile: ${{ parameters.pomFilePath }}
+      javaHomeOption: ${{ parameters.jdk }}
+      mavenVersionOption: ${{ parameters.maven }}
+      publishJUnitResults: true
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
