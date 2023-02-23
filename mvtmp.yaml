@@ -10,7 +10,7 @@ parameters:
 - name: jdk
   displayName: java install
   type: string
-  default: '1.11'
+  default: '1.17'
 - name: pomFilePath
   displayName: mavenPOMFile
   type: string

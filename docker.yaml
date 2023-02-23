@@ -1,0 +1,14 @@
+pool:
+  vmImage: ubuntu-latest
+
+trigger:
+  - main
+
+steps:
+  - task: Docker@2
+    displayName: docker
+    inputs:
+      command: 'buildAndPush'
+      Dockerfile: '**/Dockerfile'
+  
+  
